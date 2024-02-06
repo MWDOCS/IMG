@@ -3,46 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./favicon.ico">
     <title>MW & MWT 文档丨图像储存库</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <style>
-        a {
-            color: #0295ff;
-            font-weight: 500;
-            text-decoration: none;
-            overflow-wrap: break-word;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/picocss/2.0.0-rc2/pico.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"
+        integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="mainpage-col">
-        <div class="mainpage-box">
-            <div class="mainpage-title">MW & MWT 文档丨图像储存库</div>
-            <hr>
-            <strong><p style="text-align: center">
-                本网站内容均为网络收集与自制，转载已标明出处，如需协商请发送邮箱
-                <br>
-                <br> 本网站图片内容均已压缩，如需原图请误下载本站图片
-                <br>
-                <br> 本网站与 Artstorm 或 Cube Software 或其任何子公司或附属公司没有附属、关联、授权、认可或以任何方式关联
-                <br>
-                <br> Modern Warships 的名称以及任何相关名称、标志和图像均为其各自所有者的注册商标
-                <br>
-                <br> 联系邮箱：<a href="mailto:netfox@mwdocs.info" class="button">netfox@mwdocs.info</a>
-            </p></strong>
-        </div>
-    </div>
-    <div class="mainpage-col">
-        <div class="mainpage-box">
-            <div class="mainpage-title-sub">前往官网</div>
-            <p style="text-align:center">
-                <strong><a href="https://mwdocs.info" target="_blank" class="button">mwdocs.info</a> - MW & MWT 文档</strong>
-            </p>
-        </div>
-    </div>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><img width="200" src="mwdocs-logo-link.png"></li>
+            </ul>
+            <ul>
+                <li><a href="https://mwdocs.info" role="button" class="secondary">前往文档</a></li>
+            </ul>
+        </nav>
+        <hgroup>
+            <h2>MW & MWT 文档 <kbd>图像储存库</kbd></h2>
+            <b><ins>本网站图片内容均已压缩，如需原图请误使用本站图片！</ins></b>
+        </hgroup>
+        <details>
+            <summary role="button" class="secondary">声明</summary>
+            <blockquote>
+                <strong>
+                    本网站与 <mark>Artstorm</mark> 或 <mark>Cube Software</mark> 或其任何子公司或附属公司没有附属、关联、授权、认可或以任何方式关联
+                    <hr>
+                    <mark>Modern Warships</mark> 的名称以及任何相关名称、标志和图像均为其各自所有者的注册商标
+                    <hr>
+                    <kbd>联系邮箱：netfox@mwdocs.info</kbd>
+                </strong>
+            </blockquote>
+        </details>
+        <article>
+            <div id="aplayer"></div>
+        </article>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"
+        integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            audio: [{
+                name: '春风十里报新年',
+                artist: '接个吻，开一枪/火鸡/吕口口/Lambert/杨胖雨',
+                url: 'https://api.wuenci.com/meting/api/?server=netease&type=url&id=1413464902',
+                cover: 'https://api.wuenci.com/meting/api/?server=netease&type=pic&id=109951164595606537'
+            }]
+        });
+    </script>
 </body>
 
 </html>
