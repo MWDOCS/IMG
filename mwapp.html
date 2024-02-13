@@ -3,9 +3,34 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdn.staticfile.net/picocss/2.0.0-rc2/pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.net/mvp.css/1.14.0/mvp.css" />
     <style>
-        img {
+        :root {
+            --active-brightness: 0.85;
+            --border-radius: 5px;
+            --box-shadow: 2px 2px 10px;
+            --color-accent: #118bee15;
+            --color-bg: #fff;
+            --color-bg-secondary: #e9e9e9;
+            --color-link: #ffb62f;
+            --color-secondary: #15559a;
+            --color-secondary-accent: #920de90b;
+            --color-shadow: #f4f4f4;
+            --color-table: #118bee;
+            --color-text: #15559a;
+            --color-text-secondary: #999;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --hover-brightness: 1.2;
+            --justify-important: center;
+            --justify-normal: left;
+            --line-height: 1.5;
+            --width-card: 285px;
+            --width-card-medium: 460px;
+            --width-card-wide: 800px;
+            --width-content: 1080px;
+        }
+
+        .img {
             border: 3px solid #ddd;
             border-radius: 4px;
         }
@@ -13,41 +38,59 @@
 </head>
 
 <body>
-    <main class="container">
-        <nav>
-            <ul>
-                <li>
-                    <h2><mark><ins>关于</ins> APP</mark></h2>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="https://afdian.net/a/mwdocs" role="button">爱发电</a></li>
-            </ul>
-        </nav>
-        <hgroup>
-            <h2>Modern Warships 网站集成 </h2>
-            <p><b>一个简易的为 <mark>玩家自制网站</mark> 集成的应用，给玩家提供便利</b></p>
-        </hgroup>
-        <hr />
-        <b>最新版本：<ins>v0.0.5</ins>丨需要更新？前往 Github <a
-                href="https://github.com/MWDOCS/MWapp/releases">下载最新版</a></b>
+    <header>
+        <img alt="MWDOCS-Logo" src="./MWDOCS-Dark.png" height="90">
         <br />
-        <b>本地版本：<ins>查看 APP 顶部</ins></b>
-        <progress></progress>
-        <details>
-            <summary role="button" class="secondary">声明</summary>
-            <blockquote>
-                <strong>
-                    本网站与 <mark>Artstorm</mark> 或 <mark>Cube Software</mark> 或其任何子公司或附属公司没有附属、关联、授权、认可或以任何方式关联
-                    <hr>
-                    <mark>Modern Warships</mark> 的名称以及任何相关名称、标志和图像均为其各自所有者的注册商标
-                    <hr>
-                    <kbd>联系邮箱：netfox@mwdocs.info</kbd>
-                </strong>
-            </blockquote>
-        </details>
-        <img width="100%" src="./app-show.jpg" />
-    </main>
+        <small>*此 Logo 由 MW & MWT 文档 提供</small>
+        <h1><u>Modern Warships</u> 网站集成</h1>
+        <p><small><b>一个简易的为 玩家自制网站 集成的应用，给玩家提供便利</b></small></p>
+        <a href="https://afdian.net/a/mwdocs"><i>爱发电</i></a><a
+            href="https://github.com/MWDOCS/MWapp/releases"><i>下载最新版</i></a>
+        <section id="section-1">
+            <aside align="left">
+                <h2>APP 版本</h2>
+                <p>
+                    <b>最新版本：</b>v0.0.5
+                    <br>
+                    <b>本地版本：</b>查看 APP 顶部
+                    <br />
+                    <b>需要更新？前往 Github <a href="https://github.com/MWDOCS/MWapp/releases">下载最新版</a></b>
+                    <br />
+                    <small>*请使用合适的网络</small>
+                </p>
+            </aside>
+            <aside align="left">
+                <img width="100%" src="https://docs.mwdocs.info/netfox-logo-round.png">
+                <h2>关于 APP</h2>
+                <p>1. 使用 FusionApp 制作的网站 APP
+                    <br />2. APP 内网站【除了 APP 开发团队（网狐社）的网站】一律标注第三方网站
+                    <br />3. 如有侵权请联系 netfox@mwdocs.info
+                <h2>声明</h2>
+                本 网站/APP 与 <mark>Artstorm</mark> 或 <mark>Cube Software</mark> 或其任何子公司或附属公司没有附属、关联、授权、认可或以任何方式关联
+                <br />
+                <mark>Modern Warships</mark> 的名称以及任何相关名称、标志和图像均为其各自所有者的注册商标
+                </p>
+            </aside>
+            <aside align="left">
+                <h2>APP 帮助</h2>
+                <details>
+                    <summary>有些图片加载不出来？</summary>
+                    <p>所有服务来自境外服务器，有可能会访问失败，并且 APP 内不支持刷新，请重新打开 APP 或使用特殊网络</p>
+                </details>
+                <details>
+                    <summary>有些网站速度慢？</summary>
+                    <p>所有服务来自境外服务器，实在打不开请使用特殊网络</p>
+                </details>
+            </aside>
+        </section>
+        <article>
+            <img class="img" src="./app-show.jpg">
+        </article>
+        <footer>
+            Copyright © 2024 <a href="https://mwdocs.info">MW &amp; MWT 文档</a>丨<a href="./mwapp.html">MW 网站集成</a> by 网狐社
+            All rights reserved.</div>
+        </footer>
+    </header>
 </body>
 
 </html>
